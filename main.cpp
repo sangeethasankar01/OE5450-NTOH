@@ -1,6 +1,6 @@
-/********************************************************************
-******Lid Driven Cavity with Obstacle using lattice boltzmann method**
-**********************************************************************/
+/*********************************************************
+******Lid Driven Cavity using lattice boltzmann method****
+**********************************************************/
 //// D2Q9 LBM model.....
 
 #include <iostream>
@@ -43,9 +43,11 @@ int main()
 	cout << "The value of tau is:"<< tauf << endl;
 	double rho[N+1][M+1], ux[N+1][M+1], vy[N+1][M+1]; //2d array for storing macroscopic density and velocity
     double f[Q][N+1][M+1], feq[Q][N+1][M+1];  // distribution function and equilibrium distribution function
+	
 // Define the vorticity and stream function
         double zeta[N+1][M+1]; // vorticity
         double psi[N+1][M+1],psi_new[N+1][M+1];   // stream function
+	
 //Lattice Weights in equilibrium distribution function
 	double w[9]={4.0/9.0,1.0/9.0,1.0/9.0,1.0/9.0,1.0/9.0,1.0/36.0,1.0/36.0,1.0/36.0,1.0/36.0};
 
